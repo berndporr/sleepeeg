@@ -1,6 +1,6 @@
 # Sleep EEG and ECG
 
-Recording of EEG (Fp1 vs A1) and ECG (II)
+Recording of EEG (Fp1 vs A1) and ECG (II) during about 3 hrs of sleep. The person was then woken up.
 
 ## Usage
 
@@ -37,3 +37,6 @@ Then run:
 ```
 python explore.py
 ```
+![alt tag](eeg.png)
+![alt tag](ecg.png)
+![alt tag](hr.png)

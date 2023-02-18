@@ -17,11 +17,13 @@ for t in eegecg.getTimeAxis():
     customdate = customdate + datetime.timedelta(seconds=t)
     ts.append(customdate)
 
+tl = "time/h:m:s"
+
 # plotting EEG
 plt.title("EEG")
 plt.gca().xaxis.set_major_formatter(myFmt)
 plt.plot(ts,eegecg.getEEG()*1E6)
-plt.xlabel("time/secs")
+plt.xlabel(tl)
 plt.ylabel("EEG/uV")
 
 # plotting ECG
@@ -29,7 +31,7 @@ plt.figure()
 plt.title("ECG")
 plt.gca().xaxis.set_major_formatter(myFmt)
 plt.plot(ts,eegecg.getECG())
-plt.xlabel("time/secs")
+plt.xlabel(tl)
 plt.ylabel("ECG/volt")
 
 # plotting heartrate
@@ -47,7 +49,7 @@ plt.figure()
 plt.title("Heart rate")
 plt.gca().xaxis.set_major_formatter(myFmt)
 plt.plot(ts, heart_rate)
-plt.ylabel('Heart rate / BPM')
-plt.xlabel('time/sec')
+plt.ylabel("Heart rate / BPM")
+plt.xlabel(tl)
 
 plt.show()
